@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cookies from "js-cookie";
 import { Content } from "./Content";
 import ProtectedRoute from "./ProtectedRoute";
+import Login from "./Login";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -29,6 +30,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
+        <Route path="/login" element={<Login />} />
         <Route element={<ProtectedRoute isLoggedIn={loggedIn} />}>
           <Route path="/" element={<Content />} />
         </Route>
