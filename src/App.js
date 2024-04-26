@@ -62,7 +62,7 @@ export const options = {
   layout: { padding: 30 },
 };
 
-const BASE_API_URL = window.config.apiUrl;
+const BASE_API_URL = window.configs.apiUrl;
 const SELECTED_BANKS = "selectedBanks";
 const SELECTED_CURRENCY = "selectedCurrency";
 
